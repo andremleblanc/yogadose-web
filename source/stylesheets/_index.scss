@@ -1,3 +1,5 @@
+@import 'variables';
+
 #mc_embed_signup {
   .indicates-required {
     text-align: left
@@ -5,7 +7,16 @@
 }
 
 .index {
-  section { height: 550px }
+  > section {
+    h1 {
+      color: white;
+      font-size: 42px;
+      margin-top: 0;
+      text-shadow: 1px 1px 1px black;
+    }
+
+    > .row { padding: 70px 15px; }
+  }
 
   .intro {
     background: image-url('519042014.jpg'), no-repeat, fixed;
@@ -33,12 +44,6 @@
       }
     }
 
-    h1 {
-      color: white;
-      font-size: 42px;
-      text-shadow: 1px 1px 1px black;
-    }
-
     .control-label {
       font-size:16px;
       font-weight: 400;
@@ -49,6 +54,44 @@
       .subtitle {
         font-size: 12px;
       }
+    }
+  }
+
+  .mission {
+    background: image-url('619643870.jpg'), no-repeat, fixed;
+    background-position: center 20%;
+    background-size: cover;
+    color: white;
+    padding: 70px 50px 0;
+    position: relative;
+    text-align: left;
+
+    // h1 {
+    //   margin-top: 0;
+    // }
+
+    &:before {
+      content: '';
+    	position: absolute;
+    	top: 0;
+    	right: 0;
+    	bottom: 0;
+    	left: 0;
+
+      @media (max-width: 767px){
+        background-image: linear-gradient(to bottom left, rgba(0,0,0,0.4), rgba(0,0,0,0.7) 60%);
+      }
+      @media (min-width: 768px) and (max-width: 991px){
+        background-image: linear-gradient(to bottom left, transparent, rgba(0, 0, 0, 0.4) 20%, rgba(0, 0, 0, 0.7) 60%)
+      }
+      @media (min-width: 992px){
+        background-image: linear-gradient(to bottom left, rgba(0,0,0,0.0) 30%, rgba(0,0,0,0.7) 60%);
+      }
+    }
+
+    .pre-header {
+      font-family: $font-header-stack;
+      font-weight: 600;
     }
   }
 }
