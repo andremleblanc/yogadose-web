@@ -2,6 +2,10 @@
 @import 'index';
 @import 'variables';
 
+@media (max-width: 767px){
+  .except-mobile { display: none; }
+}
+
 body {
   text-align: center;
   font-family: $font-copy-stack;
