@@ -43,4 +43,5 @@ configure :build do
   # activate :minify_javascript
 
   set :build_dir, 'docs'
+  set :http_prefix, '/yogadose-web'
 end
